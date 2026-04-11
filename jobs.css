@@ -1,0 +1,211 @@
+/* =============================================
+   jobs.css - NovaIV Cameras
+   Jobs page stylesheet
+   COS10026 - Web Technology Project
+   ============================================= */
+
+/* --- GLOBAL RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- BODY --- */
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222222;
+  background-color: #f9f9f9;
+}
+
+/* --- HEADER --- */
+header {
+  background-color: #003568;
+  padding: 0 2rem;
+}
+
+/* --- NAVIGATION --- */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+
+nav ul li a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover {
+  background-color: #002244;
+}
+
+/* Active page highlight */
+nav ul li a[aria-current="page"] {
+  background-color: #002244;
+  border-bottom: 3px solid #ffffff;
+}
+
+/* --- MAIN CONTENT AREA --- */
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+main h1 {
+  font-size: 2rem;
+  color: #003568;
+  margin-bottom: 0.5rem;
+}
+
+main > p {
+  color: #444;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* --- JOB ARTICLES --- */
+.job-article {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+}
+
+.job-article h2 {
+  color: #1a1a2e;
+  border-bottom: 3px solid #003568;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.job-article h3 {
+  color: #333;
+  margin-top: 1.2rem;
+  font-size: 1.05rem;
+}
+
+/* --- JOB META INFO BOX --- */
+.job-meta {
+  background-color: #f4f4f4;
+  border-left: 4px solid #003568;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.job-meta p {
+  margin: 0.3rem 0;
+}
+
+/* --- LISTS --- */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+ul li, ol li {
+  margin-bottom: 0.4rem;
+}
+
+/* --- ASIDE --- */
+.jobs-aside {
+  float: right;
+  width: 25%;
+  margin: 0 0 1rem 2rem;
+  padding: 1.2rem;
+  border: 2px solid #003568;
+  border-radius: 6px;
+  background-color: #eef3f9;
+}
+
+.jobs-aside h3 {
+  font-size: 1.05rem;
+  color: #1a1a2e;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid #003568;
+  padding-bottom: 0.4rem;
+}
+
+.jobs-aside ul {
+  padding-left: 1.2rem;
+}
+
+.jobs-aside ul li {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.jobs-aside a {
+  color: #003568;
+  text-decoration: underline;
+}
+
+.jobs-aside a:hover {
+  color: #002244;
+}
+
+/* Clearfix so aside doesn't overflow */
+.jobs-wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #003568;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+footer a {
+  color: #aac8e8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .jobs-aside {
+    float: none;
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li a {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #002244;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+}
