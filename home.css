@@ -1,0 +1,200 @@
+/* This is the CSS file for the homepaage of the website
+   It contains the styles for the home page
+
+
+
+
+*/
+
+#images {
+   object-fit: cover;
+}
+
+#img1 {
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+#img2 {
+   position: absolute; /* keeps the positon of the image in the same place no matter what*/
+   top: 0;
+   right: 0;
+}
+
+header {
+   position: relative; /* position determines where the item sits on the page*/
+   text-align: center;
+   margin: 50px;
+}
+
+
+
+.menu {
+  display: inline-block;
+  border: 3px solid goldenrod;
+  text-decoration: none;
+  justify-content: space-evenly;
+  padding: 3px;
+}
+
+
+nav a {
+   color: white;
+}
+
+nav {
+   text-align: center;
+}
+
+
+
+h1 {
+   text-align: center;
+}
+
+#slogan {
+   text-align: center;
+}
+
+
+h4 {
+   text-align: center;
+}
+
+html {
+   background-color: black;
+   color: white;
+}
+
+h2 {
+   text-align: center;
+}
+
+
+#img3 {
+   display: flex;
+   justify-content: left;
+
+
+
+}
+
+.product-lens {
+   float: right;
+   width: 45%;
+   border: 2px solid white;
+   padding: 1px;
+   margin: 2px;
+}
+
+.product-cam {
+   float: left;
+   width: 45%;
+   border: 2px solid white;
+   padding: 1px;
+   margin: 2px;
+}
+
+
+.product-accessories {
+   clear: both;
+   float: left;
+   width: 45%;
+   border: 2px solid white;
+   padding: 1px;
+   margin: 2px;
+}
+
+#cam {
+   display: inline-block;
+   margin: 1em;
+}
+#lens {
+   display: inline-block;
+   margin: 0 auto;
+}
+
+#accessories {
+   display: inline-block;
+   margin: 1em;
+  
+}
+
+
+#midhead1 {
+   text-align: center;
+}
+
+
+#midhead2 {
+   text-align: center;
+}
+
+body {
+   font-size: 14px;
+}
+
+#shipping {
+    clear: both;
+    text-align: center;
+    margin-top: 50px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 1em;
+    margin-top: 50px;
+}
+
+
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: center;
+}
+
+table {
+   border: 2px solid black;
+   padding: 100px;
+   margin: 0 auto;
+}
+
+
+th {
+   background-color: goldenrod;
+   color: black;
+}
+
+#container {
+   max-width: 1500px;
+   margin: 0 auto;
+}
+
+
+#search {
+   text-align: center;
+   color: white;
+}
+
+
+.searchbar {
+   padding: 10px;
+   width: 300px;
+   border: 2px solid goldenrod;
+   border-radius: 5px;
+   background-color: black;
+   color: white;
+}
+
+.search-button {
+   padding: 10px 20px;
+   border: 2px solid goldenrod;
+   border-radius: 5px;
+   background-color: black;
+   color: white;
+}
+
+
