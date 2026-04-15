@@ -31,14 +31,8 @@ header {
    /* AI EDIT: added max-width so header text doesnt stretch too wide */
    max-width: 800px;
 }
-/* --- NAVIGATION ---
-   Flexbox used to align nav links horizontally in a row.
-   justify-content: center keeps them centred on all screen sizes.
-   flex-wrap: wrap allows links to wrap to next line on small screens
-   rather than overflowing. Chosen over float/inline-block for
-   cleaner responsive behaviour.
-   Nav style matched to team's index.html — gold bordered buttons
-   on black background as agreed with the group. */
+/* --- NAVIGATION ---*/
+
 nav ul {
   list-style: none;
   display: flex;
@@ -103,7 +97,7 @@ h2 {
 .product-lens {
    float: right;
    width: 45%;
-   border: 2px solid white;
+   border: 2px solid goldenrod;
    /* AI EDIT: increased padding so content doesnt hug the box edges */
    padding: 15px;
    margin: 2px;
@@ -112,7 +106,7 @@ h2 {
 .product-cam {
    float: left;
    width: 45%;
-   border: 2px solid white;
+   border: 2px solid goldenrod;
    /* AI EDIT: increased padding so content doesnt hug the box edges */
    padding: 15px;
    margin: 2px;
@@ -124,7 +118,7 @@ h2 {
       this fills the awkward empty space on the right side of the page */
    margin: 10px auto;
    width: 45%;
-   border: 2px solid white;
+   border: 2px solid goldenrod;
    /* AI EDIT: increased padding so content doesnt hug the box edges */
    padding: 15px;
 }
@@ -185,7 +179,7 @@ table, th, td {
 }
 
 table {
-   border: 2px solid white;
+   border: 2px solid goldenrod;
    /* AI EDIT: reduced padding from 100px to something sensible */
    padding: 10px;
    margin: 0 auto;
@@ -251,3 +245,11 @@ footer a {
 }
 
 
+#acknowledgement {
+   clear: both;
+   border: 2px solid goldenrod;
+   padding: 20px;
+   margin: 30px auto;
+   max-width: 800px;
+   text-align: center;
+}
