@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!--
+   jobs.html - NovaIV Cameras
+   COS10026 Web Technology - Semester 1, 2026
+
+   AI Acknowledgement: Generative AI was used
+   as a coding assistant for this page. I defined the
+   page structure, job content, colour theme, and all
+   functional requirements (aside, apply buttons,
+   reference numbers, semantic tags). AI assisted with
+   implementation. All code was reviewed, understood,
+   and tested by me in VS Code and Live Server
+   before submission.
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Opportunities - NovaIV Cameras</title>
+  <link rel="stylesheet" href="jobs.css">
+
+  <!-- EMBEDDED CSS: Required by Swinburne spec (at least one embedded example per page).
+       Kept separate from jobs.css intentionally to demonstrate embedded CSS usage. -->
+  <style>
+    /* Gold glow effect on job card hover — gives subtle interactive
+       feedback using rgba gold shadow. rgba(201,168,76,0.3) is the
+       gold colour at 30% opacity so it glows without being harsh. */
+    .job-article:hover {
+      box-shadow: 0 2px 12px rgba(201, 168, 76, 0.3);
+    }
+
+    /* Reference numbers styled in gold to stand out in the meta box.
+       letter-spacing adds slight spacing between characters for
+       better readability of the alphanumeric reference code. */
+    .ref-number {
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: #DAA520;
+    }
+
+    /* Apply button uses gold bg with black text — inverted from the
+       rest of the page to make it stand out as a call-to-action.
+       I decided to place one button per job at the bottom of each
+       article. Links to apply.html where my teammate's form is. */
+    .apply-btn {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.6rem 1.5rem;
+      background-color: #DAA520;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+    }
+
+    /* Slightly lighter gold on hover so button gives visual feedback
+       without the colour change being too jarring. */
+    .apply-btn:hover {
+      background-color: #e8c547;
+      color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SHARED NAVIGATION: Identical across all pages as required by spec.
+       aria-label added for screen reader accessibility.
+       aria-current="page" marks the active link — screen readers announce this. -->
+  <header>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html" aria-current="page">Jobs</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Career Opportunities at NovaIV Cameras</h1>
+    <p>Join our growing team at NovaIV Cameras — Australia's premier online destination for photography
+      equipment, accessories, and expertise. We are currently hiring for the following positions.</p>
+
+    <div class="jobs-wrapper">
+
+      <!-- ASIDE: Required by spec — floated right, 25% width, margin, padding, border.
+           Placed before job articles so float:right works correctly in document flow.
+           INLINE CSS: background-color set inline as required by Swinburne spec. -->
+      <aside class="jobs-aside" style="background-color: #000000;">
+        <h3>Why Join NovaIV?</h3>
+        <ul>
+          <li>Flexible hybrid work options</li>
+          <li>Staff discount on all products</li>
+          <li>Annual professional development budget</li>
+          <li>Friendly, passionate team</li>
+          <li>Career growth opportunities</li>
+        </ul>
+        <p><strong>Questions?</strong><br>
+          Email us at
+          <a href="mailto:careers@novaiv.com.au">careers@novaiv.com.au</a>
+        </p>
+      </aside>
+
+      <!-- ==================== JOB 1 ==================== -->
+      <article class="job-article">
+        <h2>Front-End Developer</h2>
+
+        <div class="job-meta">
+          <p><strong>Reference Number:</strong> <span class="ref-number">NV001</span></p>
+          <p><strong>Salary:</strong> $75,000 – $90,000 AUD per annum</p>
+          <p><strong>Reports To:</strong> Head of Digital Products</p>
+          <p><strong>Employment Type:</strong> Full-Time</p>
+        </div>
+
+        <section>
+          <h3>About the Role</h3>
+          <p>
+            We are looking for a skilled Front-End Developer to join our e-commerce team at NovaIV Cameras.
+            You will be responsible for building and maintaining the customer-facing product pages,
+            shopping cart experience, and overall website performance. You will work closely with our
+            UX and back-end teams to deliver a seamless online shopping experience.
+          </p>
+        </section>
+
+        <section>
+          <h3>Key Responsibilities</h3>
+          <!-- UNORDERED LIST (one of the required lists) -->
+          <ul>
+            <li>Develop and maintain responsive web pages using HTML5, CSS3, and JavaScript</li>
+            <li>Optimise website performance and page load speeds for improved user experience</li>
+            <li>Collaborate with designers to translate mockups into pixel-perfect interfaces</li>
+            <li>Ensure cross-browser compatibility across Chrome, Firefox, Safari, and Edge</li>
+            <li>Implement accessibility standards (WCAG 2.1) across all web pages</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Essential Requirements</h3>
+          <!-- ORDERED LIST (one of the required lists) -->
+          <ol>
+            <li>Minimum 2 years of professional front-end development experience</li>
+            <li>Proficiency in HTML5, CSS3, and vanilla JavaScript</li>
+            <li>Experience with responsive design and mobile-first development</li>
+            <li>Familiarity with version control using Git and GitHub</li>
+            <li>Understanding of web accessibility guidelines (WCAG)</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Preferable Requirements</h3>
+          <ul>
+            <li>Experience with e-commerce platforms such as Shopify or WooCommerce</li>
+            <li>Knowledge of CSS frameworks or preprocessors (SASS/LESS)</li>
+            <li>Exposure to React or Vue.js</li>
+            <li>Personal interest in photography or camera equipment</li>
+          </ul>
+        </section>
+      
+        <a href="apply.html" class="apply-btn">Apply for Front-End Developer</a>
+      </article>
+
+      <!-- ==================== JOB 2 ==================== -->
+      <article class="job-article">
+        <h2>Back-End Developer</h2>
+
+        <div class="job-meta">
+          <p><strong>Reference Number:</strong> <span class="ref-number">NV002</span></p>
+          <p><strong>Salary:</strong> $85,000 – $100,000 AUD per annum</p>
+          <p><strong>Reports To:</strong> Head of Digital Products</p>
+          <p><strong>Employment Type:</strong> Full-Time</p>
+        </div>
+
+        <section>
+          <h3>About the Role</h3>
+          <p>
+            NovaIV Cameras is seeking an experienced Back-End Developer to support the infrastructure
+            behind our online retail platform. You will design, build, and maintain server-side logic,
+            databases, and APIs that power the NovaIV shopping experience for thousands of customers
+            across Australia.
+          </p>
+        </section>
+
+        <section>
+          <h3>Key Responsibilities</h3>
+          <ul>
+            <li>Design and implement RESTful APIs to support front-end features</li>
+            <li>Manage and optimise relational databases (MySQL or PostgreSQL)</li>
+            <li>Integrate third-party services such as payment gateways and shipping APIs</li>
+            <li>Ensure application security, including data validation and protection against common vulnerabilities</li>
+            <li>Monitor server performance and troubleshoot production issues</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Essential Requirements</h3>
+          <ol>
+            <li>Minimum 3 years of back-end development experience</li>
+            <li>Proficiency in at least one server-side language (Python, Node.js, or PHP)</li>
+            <li>Strong understanding of database design and SQL</li>
+            <li>Experience building and consuming RESTful APIs</li>
+            <li>Knowledge of web security best practices</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Preferable Requirements</h3>
+          <ul>
+            <li>Experience with cloud platforms such as AWS or Google Cloud</li>
+            <li>Familiarity with Docker or containerisation tools</li>
+            <li>Exposure to agile or scrum development methodologies</li>
+            <li>Experience working in an e-commerce or retail environment</li>
+          </ul>
+        </section>
+      
+        <a href="apply.html" class="apply-btn">Apply for Back-End Developer</a>
+      </article>
+
+      <!-- ==================== JOB 3 ==================== -->
+      <article class="job-article">
+        <h2>Marketing Specialist</h2>
+
+        <div class="job-meta">
+          <p><strong>Reference Number:</strong> <span class="ref-number">NV003</span></p>
+          <p><strong>Salary:</strong> $65,000 – $78,000 AUD per annum</p>
+          <p><strong>Reports To:</strong> Marketing Manager</p>
+          <p><strong>Employment Type:</strong> Full-Time</p>
+        </div>
+
+        <section>
+          <h3>About the Role</h3>
+          <p>
+            We are looking for a creative and data-driven Marketing Specialist to grow the NovaIV Cameras
+            brand across digital channels. You will manage campaigns, produce content, and analyse
+            performance to attract photography enthusiasts and professional photographers to our platform.
+          </p>
+        </section>
+
+        <section>
+          <h3>Key Responsibilities</h3>
+          <ul>
+            <li>Plan and execute digital marketing campaigns across social media, email, and search</li>
+            <li>Write compelling product descriptions, blog posts, and promotional content</li>
+            <li>Manage SEO strategy to improve organic search rankings</li>
+            <li>Analyse campaign performance using Google Analytics and provide monthly reports</li>
+            <li>Coordinate with the product and design teams for promotional assets</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Essential Requirements</h3>
+          <ol>
+            <li>Bachelor's degree in Marketing, Communications, or a related field</li>
+            <li>Minimum 2 years of experience in a digital marketing role</li>
+            <li>Strong written and verbal communication skills</li>
+            <li>Hands-on experience with Google Ads, Meta Ads, or similar platforms</li>
+            <li>Proficiency in Google Analytics or equivalent analytics tools</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Preferable Requirements</h3>
+          <ul>
+            <li>Experience marketing photography, consumer electronics, or lifestyle products</li>
+            <li>Knowledge of Adobe Creative Suite for basic asset creation</li>
+            <li>Familiarity with email marketing platforms such as Mailchimp or Klaviyo</li>
+            <li>Active interest in photography or videography</li>
+          </ul>
+        </section>
+      
+        <a href="apply.html" class="apply-btn">Apply for Marketing Specialist</a>
+      </article>
+
+      <!-- ==================== JOB 4 ==================== -->
+      <article class="job-article">
+        <h2>Camera Specialist</h2>
+
+        <div class="job-meta">
+          <p><strong>Reference Number:</strong> <span class="ref-number">NV004</span></p>
+          <p><strong>Salary:</strong> $58,000 – $70,000 AUD per annum</p>
+          <p><strong>Reports To:</strong> Retail Operations Manager</p>
+          <p><strong>Employment Type:</strong> Full-Time / Part-Time Available</p>
+        </div>
+
+        <section>
+          <h3>About the Role</h3>
+          <p>
+            As a Camera Specialist at NovaIV Cameras, you will be the go-to expert for our online
+            customers and internal teams. You will produce product reviews, assist customers with
+            technical queries, and help curate our product catalogue to ensure accuracy and quality
+            across all listings.
+          </p>
+        </section>
+
+        <section>
+          <h3>Key Responsibilities</h3>
+          <ul>
+            <li>Provide expert product advice to customers via live chat, email, and phone</li>
+            <li>Write accurate and informative product descriptions and buying guides</li>
+            <li>Test and review new camera products before they are listed on the site</li>
+            <li>Assist the merchandising team with product categorisation and tagging</li>
+            <li>Train other staff on camera products, terminology, and features</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Essential Requirements</h3>
+          <ol>
+            <li>Demonstrated knowledge of cameras, lenses, and photography accessories</li>
+            <li>Experience in a customer-facing retail or technical support role</li>
+            <li>Strong written communication skills for producing product content</li>
+            <li>Ability to explain technical concepts clearly to non-technical customers</li>
+            <li>Passion for photography and keeping up with industry trends</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Preferable Requirements</h3>
+          <ul>
+            <li>Prior experience working in a camera or electronics retail environment</li>
+            <li>Knowledge of both mirrorless and DSLR systems across brands (Sony, Canon, Nikon, Fujifilm)</li>
+            <li>Experience with photo editing software such as Adobe Lightroom</li>
+            <li>Portfolio or active photography practice (any genre)</li>
+          </ul>
+        </section>
+      
+        <a href="apply.html" class="apply-btn">Apply for Camera Specialist</a>
+      </article>
+
+    </div><!-- end .jobs-wrapper -->
+  </main>
+
+  <!-- SHARED FOOTER: Required by spec to include Jira, GitHub repo, and email links.
+       Placeholder links to be updated once group finalises Jira board and GitHub Pages. -->
+  <footer>
+    <p>&copy; 2026 NovaIV Cameras. All rights reserved.</p>
+    <p>
+      <a href="https://YOUR-JIRA-LINK-HERE" target="_blank" rel="noopener noreferrer">Jira Project Board</a> |
+      <a href="https://github.com/YOUR-REPO-LINK-HERE" target="_blank" rel="noopener noreferrer">GitHub Repository</a> |
+      <a href="mailto:info@novaiv.com.au">info@novaiv.com.au</a>
+    </p>
+  </footer>
+
+</body>
+</html>
