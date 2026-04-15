@@ -1,52 +1,77 @@
-/* This is the CSS file for the homepaage of the website
+/* This is the CSS file for the ho
+epage of the website
    It contains the styles for the home page
-
-
-
-
 */
 
 #images {
    object-fit: cover;
 }
 
+/* AI EDIT: removed position absolute from img1 and img2 as it was
+   pulling them out of the page flow and overlapping the header text */
 #img1 {
-   position: absolute;
-   top: 0;
-   left: 0;
+   width: 300px;
+   height: 300px;
+   /* AI EDIT: removed position absolute, now floats left naturally */
+   float: left;
 }
 
 #img2 {
-   position: absolute; /* keeps the positon of the image in the same place no matter what*/
-   top: 0;
-   right: 0;
+   width: 300px;
+   height: 300px;
+   /* AI EDIT: removed position absolute, now floats right naturally */
+   float: right;
 }
 
 header {
-   position: relative; /* position determines where the item sits on the page*/
+   position: relative;
    text-align: center;
-   margin: 50px;
+   /* AI EDIT: increased margin to give header more breathing room */
+   margin: 30px auto;
+   /* AI EDIT: added max-width so header text doesnt stretch too wide */
+   max-width: 800px;
+}
+/* --- NAVIGATION ---
+   Flexbox used to align nav links horizontally in a row.
+   justify-content: center keeps them centred on all screen sizes.
+   flex-wrap: wrap allows links to wrap to next line on small screens
+   rather than overflowing. Chosen over float/inline-block for
+   cleaner responsive behaviour.
+   Nav style matched to team's index.html — gold bordered buttons
+   on black background as agreed with the group. */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
 }
 
 
-
-.menu {
+nav ul li a {
   display: inline-block;
-  border: 3px solid goldenrod;
+  color: white;
   text-decoration: none;
-  justify-content: space-evenly;
-  padding: 3px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  border: 1px solid goldenrod;
+  margin: 0.3rem 0.2rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 
-nav a {
-   color: white;
+nav ul li a:hover {
+  background-color: goldenrod;
+  color: black;
 }
 
-nav {
-   text-align: center;
+#mainnav {
+   border-bottom: 2px solid goldenrod;
+   padding-bottom: 10px;
+   margin-bottom: 30px;
 }
-
 
 
 h1 {
@@ -56,7 +81,6 @@ h1 {
 #slogan {
    text-align: center;
 }
-
 
 h4 {
    text-align: center;
@@ -71,20 +95,17 @@ h2 {
    text-align: center;
 }
 
-
 #img3 {
    display: flex;
    justify-content: left;
-
-
-
 }
 
 .product-lens {
    float: right;
    width: 45%;
    border: 2px solid white;
-   padding: 1px;
+   /* AI EDIT: increased padding so content doesnt hug the box edges */
+   padding: 15px;
    margin: 2px;
 }
 
@@ -92,24 +113,27 @@ h2 {
    float: left;
    width: 45%;
    border: 2px solid white;
-   padding: 1px;
+   /* AI EDIT: increased padding so content doesnt hug the box edges */
+   padding: 15px;
    margin: 2px;
 }
 
-
 .product-accessories {
    clear: both;
-   float: left;
+   /* AI EDIT: changed to margin auto to center it instead of floating left
+      this fills the awkward empty space on the right side of the page */
+   margin: 10px auto;
    width: 45%;
    border: 2px solid white;
-   padding: 1px;
-   margin: 2px;
+   /* AI EDIT: increased padding so content doesnt hug the box edges */
+   padding: 15px;
 }
 
 #cam {
    display: inline-block;
    margin: 1em;
 }
+
 #lens {
    display: inline-block;
    margin: 0 auto;
@@ -118,17 +142,27 @@ h2 {
 #accessories {
    display: inline-block;
    margin: 1em;
-  
 }
 
+/* AI EDIT: added styling to make the hiring section stand out as its own section */
+#job-info {
+   clear: both;
+   border: 2px solid goldenrod;
+   padding: 20px;
+   margin: 30px auto;
+   max-width: 800px;
+   text-align: center;
+}
 
 #midhead1 {
    text-align: center;
 }
 
-
 #midhead2 {
    text-align: center;
+   /* AI EDIT: reduced font size so it doesnt look oversized */
+   font-size: 16px;
+   font-weight: normal;
 }
 
 body {
@@ -136,32 +170,26 @@ body {
 }
 
 #shipping {
-    clear: both;
-    text-align: center;
-    margin-top: 50px;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    padding: 1em;
-    margin-top: 50px;
+   clear: both;
+   text-align: center;
+   margin-top: 80px;
+   /* AI EDIT: removed border around shipping section, table has its own borders */
+   padding: 1em;
 }
 
-
-
 table, th, td {
-    border: 1px solid white;
-    border-collapse: collapse;
-    padding: 8px;
-    text-align: center;
+   border: 1px solid white;
+   border-collapse: collapse;
+   padding: 8px;
+   text-align: center;
 }
 
 table {
-   border: 2px solid black;
-   padding: 100px;
+   border: 2px solid white;
+   /* AI EDIT: reduced padding from 100px to something sensible */
+   padding: 10px;
    margin: 0 auto;
 }
-
 
 th {
    background-color: goldenrod;
@@ -173,12 +201,12 @@ th {
    margin: 0 auto;
 }
 
-
 #search {
    text-align: center;
    color: white;
+   /* AI EDIT: added margin so search bar has space around it */
+   margin: 15px 0;
 }
-
 
 .searchbar {
    padding: 10px;
@@ -195,6 +223,31 @@ th {
    border-radius: 5px;
    background-color: black;
    color: white;
+   /* AI EDIT: added cursor pointer so it looks clickable */
+   cursor: pointer;
+}
+
+/* AI EDIT: added hover effect on search button to match goldenrod theme */
+.search-button:hover {
+   background-color: goldenrod;
+   color: black;
+}
+
+footer {
+   border-top: 6px double white;
+   padding: 40px 10px;
+   text-align: center;
+   display: inline-block;
+   width: 99%;
+   margin-top: 50px;
+   background-image: url("images/footimg.jpg");
+   background-size: cover;
+   background-position: center;
+}
+
+footer a {
+   color: white;
+   text-decoration: underline;
 }
 
 
