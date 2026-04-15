@@ -99,6 +99,9 @@ h2 {
     border-radius: 10px;
     background-color: #111;
     text-align: left;
+    flex: 1;
+    max-width: 300px;
+    margin: 0;
 }
 .group-photo img {
     width: 100%;
@@ -112,4 +115,51 @@ h2 {
 .group-photo:hover {
     transform: scale(1.1);
     transition: 0.3s;
+}
+.team-Layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px;
+}
+
+/* --- NAVIGATION ---
+   Flexbox used to align nav links horizontally in a row.
+   justify-content: center keeps them centred on all screen sizes.
+   flex-wrap: wrap allows links to wrap to next line on small screens
+   rather than overflowing. Chosen over float/inline-block for
+   cleaner responsive behaviour.
+   Nav style matched to team's index.html — gold bordered buttons
+   on black background as agreed with the group. */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+/* Individual nav links styled as gold-bordered buttons.
+   display: inline-block ensures the full padding area is clickable.
+   letter-spacing adds slight spacing for a premium feel.
+   transition adds smooth hover animation (0.2s ease). */
+nav ul li a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  border: 1px solid goldenrod;
+  margin: 0.3rem 0.2rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Gold fill on hover — inverts colours (gold bg, black text)
+   to give clear visual feedback to the user. */
+nav ul li a:hover {
+  background-color: #c9a84c;
+  color: #000000;
 }
