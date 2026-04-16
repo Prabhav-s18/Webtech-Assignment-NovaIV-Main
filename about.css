@@ -76,7 +76,6 @@ caption {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #ffd700;
 }
 th {
     background-color: #222;
@@ -93,12 +92,7 @@ tr:hover {
     background-color: #2a2a2a;
     transition: 0.2s;
 }
-h2 {
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 1.6rem;
-    color: #ffd700;
-}
+
 .group-photo {
     width: 300px;
     margin: 40px auto;
