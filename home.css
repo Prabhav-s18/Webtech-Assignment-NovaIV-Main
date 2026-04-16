@@ -67,7 +67,7 @@ nav ul li a:hover {
    margin-bottom: 30px;
 }
 
-
+/* All these things need to be aligned to the center so they look nice and organized */
 h1 {
    text-align: center;
 }
@@ -93,6 +93,10 @@ h2 {
    display: flex;
    justify-content: left;
 }
+
+
+/* AI input was used to figure out the positioning of the product boxes, as before i used absolute positioning making it look
+like it was very choppy and messy, then switched to floating so everything flows nicely and looks more organized, also added some padding so the content doesnt hug the box edges */
 
 .product-lens {
    float: right;
@@ -123,6 +127,8 @@ h2 {
    padding: 15px;
 }
 
+
+/* Inline block was used here to organise the photos into a nicer look*/
 #cam {
    display: inline-block;
    margin: 1em;
@@ -148,6 +154,8 @@ h2 {
    text-align: center;
 }
 
+/* aligns headings in the middle depending on ID*/
+
 #midhead1 {
    text-align: center;
 }
@@ -159,11 +167,15 @@ h2 {
    font-weight: normal;
 }
 
+/*changes font size for everything in the body*/
+
 body {
    font-size: 14px;
 }
 
-#shipping {
+/* styling here makes shipping table look good and organised and its own "section" */
+
+#shipping { 
    clear: both;
    text-align: center;
    margin-top: 80px;
@@ -179,8 +191,7 @@ table, th, td {
 }
 
 table {
-   border: 2px solid goldenrod;
-   /* AI EDIT: reduced padding from 100px to something sensible */
+   border: 2px solid white;
    padding: 10px;
    margin: 0 auto;
 }
