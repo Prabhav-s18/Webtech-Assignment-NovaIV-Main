@@ -1,24 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Job Application Form</title>
-  
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  border: 1px solid goldenrod;
+  margin: 0.3rem 0.2rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav ul li a:hover {
+  background-color: goldenrod;
+  color: black;
+}
+
+#mainnav {
+   border-bottom: 2px solid goldenrod;
+   padding-bottom: 10px;
+   margin-bottom: 30px;
+}
+
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #000000, #0a0a0a);
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .header {
+      padding: 40px 20px 20px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      color: #cccccc;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 30px auto 50px;
+      background: #000000;
+      padding: 30px;
+      border: 2px solid #d4af37;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+      text-align: left;
+    }
+
+    h2 {
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: grid;
+      gap: 8px;
+    }
+
+    label,
+    legend {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #d4af37;
+      border-radius: 5px;
+      background: transparent;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #aaaaaa;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    fieldset {
+      border: 1px solid #d4af37;
+      border-radius: 6px;
+      padding: 14px;
+    }
+
+    .inline-options,
+    .skills-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 8px;
+    }
+
+    .inline-options label,
+    .skills-group label {
+      color: #ffffff;
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .inline-options input,
+    .skills-group input {
+      width: auto;
+    }
+
+    button {
+      background: transparent;
+      color: #d4af37;
+      border: 1px solid #d4af37;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #d4af37;
+      color: #000000;
+    }
+
+    .note {
+      font-size: 0.95rem;
+      color: #cccccc;
+      margin-top: 8px;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    @media (max-width: 700px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
+          <nav id = "mainnav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+
+  <div class="header">
+    <h1>NovaIV Careers</h1>
+    <p>
+      Join our growing E-Commerce &amp; Digital Retail team and help us build
+      modern customer experiences, product platforms, and next-generation web applications.
+    </p>
+  </div>
+
   <div class="container">
-    <h1>Job Application Form</h1>
+    <h2>Job Application Form</h2>
 
-    <div class="intro">
-      <h2>E-Commerce &amp; Digital Retail Platform</h2>
-      <p>
-        An online retail platform expanding its technical and user experience teams
-        to enhance customer-facing websites, product listings, and online application workflows.
-      </p>
-    </div>
-
-    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" novalidate>
+    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
       <div class="form-group">
         <label for="jobRef">Job Reference Number</label>
         <input
@@ -29,8 +224,7 @@
           maxlength="5"
           pattern="[A-Za-z0-9]{5}"
           title="Exactly 5 alphanumeric characters"
-          placeholder="e.g. A1B2C"
-        />
+          placeholder="e.g. A1B2C">
       </div>
 
       <div class="two-column">
@@ -44,8 +238,7 @@
             maxlength="20"
             pattern="[A-Za-z]{1,20}"
             title="Only alphabetic characters, maximum 20"
-            placeholder="Enter first name"
-          />
+            placeholder="Enter first name">
         </div>
 
         <div class="form-group">
@@ -58,8 +251,7 @@
             maxlength="20"
             pattern="[A-Za-z]{1,20}"
             title="Only alphabetic characters, maximum 20"
-            placeholder="Enter last name"
-          />
+            placeholder="Enter last name">
         </div>
       </div>
 
@@ -72,28 +264,15 @@
           required
           pattern="(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/([0-9]{4})"
           title="Format must be dd/mm/yyyy"
-          placeholder="dd/mm/yyyy"
-          inputmode="numeric"
-        />
+          placeholder="dd/mm/yyyy">
       </div>
 
       <fieldset>
         <legend>Gender</legend>
         <div class="inline-options">
-          <label for="male">
-            <input type="radio" id="male" name="gender" value="Male" required />
-            Male
-          </label>
-
-          <label for="female">
-            <input type="radio" id="female" name="gender" value="Female" />
-            Female
-          </label>
-
-          <label for="other">
-            <input type="radio" id="other" name="gender" value="Other" />
-            Other
-          </label>
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
         </div>
       </fieldset>
 
@@ -105,8 +284,7 @@
           name="streetAddress"
           required
           maxlength="40"
-          placeholder="Enter street address"
-        />
+          placeholder="Enter street address">
       </div>
 
       <div class="two-column">
@@ -118,8 +296,7 @@
             name="suburb"
             required
             maxlength="40"
-            placeholder="Enter suburb or town"
-          />
+            placeholder="Enter suburb or town">
         </div>
 
         <div class="form-group">
@@ -149,9 +326,7 @@
             pattern="[0-9]{4}"
             maxlength="4"
             title="Exactly 4 digits"
-            placeholder="e.g. 3000"
-            inputmode="numeric"
-          />
+            placeholder="e.g. 3000">
         </div>
 
         <div class="form-group">
@@ -161,8 +336,7 @@
             id="email"
             name="email"
             required
-            placeholder="Enter email address"
-          />
+            placeholder="Enter email address">
         </div>
       </div>
 
@@ -175,40 +349,19 @@
           required
           pattern="[0-9]{8,12}"
           title="Phone number must be 8 to 12 digits"
-          placeholder="9 digits"
-          inputmode="numeric"
-        />
+          placeholder="Enter phone number">
       </div>
 
       <fieldset>
         <legend>Skill List</legend>
         <div class="skills-group">
-          <label for="html">
-            <input type="checkbox" id="html" name="skills[]" value="HTML" required />
-            HTML
-          </label>
-
-          <label for="css">
-            <input type="checkbox" id="css" name="skills[]" value="CSS" />
-            CSS
-          </label>
-
-          <label for="javascript">
-            <input type="checkbox" id="javascript" name="skills[]" value="JavaScript" />
-            JavaScript
-          </label>
-
-          <label for="ux">
-            <input type="checkbox" id="ux" name="skills[]" value="UX Design" />
-            UX Design
-          </label>
-
-          <label for="seo">
-            <input type="checkbox" id="seo" name="skills[]" value="SEO" />
-            SEO
-          </label>
+          <label><input type="checkbox" name="skills[]" value="HTML"> HTML</label>
+          <label><input type="checkbox" name="skills[]" value="CSS"> CSS</label>
+          <label><input type="checkbox" name="skills[]" value="JavaScript"> JavaScript</label>
+          <label><input type="checkbox" name="skills[]" value="UX Design"> UX Design</label>
+          <label><input type="checkbox" name="skills[]" value="SEO"> SEO</label>
         </div>
-        <p class="note">Select at least one skill.</p>
+        <p class="note">Select your relevant skills.</p>
       </fieldset>
 
       <div class="form-group">
@@ -216,12 +369,12 @@
         <textarea
           id="otherSkills"
           name="otherSkills"
-          placeholder="Enter any additional skills here"
-        ></textarea>
+          placeholder="Enter any additional skills here"></textarea>
       </div>
 
       <button type="submit">Apply Now</button>
     </form>
   </div>
+
 </body>
 </html>

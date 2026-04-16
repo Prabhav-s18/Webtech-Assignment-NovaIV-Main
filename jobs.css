@@ -1,145 +1,239 @@
 /* =============================================
    jobs.css - NovaIV Cameras
-   Jobs page stylesheet
-   COS10026 - Web Technology Project
+   COS10026 Web Technology - Semester 1, 2026
+
+   AI Acknowledgement: Generative AI was used
+   as a development assistant throughout this file.
+   I directed all design decisions including colour
+   scheme (gold #DAA520 on black #000000), font choice
+   (Arial, matching team's agreed font across all pages), layout
+   structure, aside positioning, responsive breakpoints,
+   and iterative refinements. AI generated code based on
+   my instructions and I reviewed, tested, and modified
+   the output to meet Swinburne assignment specifications.
    ============================================= */
 
-/* --- GLOBAL RESET --- */
+/* --- GLOBAL RESET ---
+   Removes default browser margin and padding from all elements.
+   box-sizing: border-box makes padding and border included in width
+   calculations, preventing layout overflow issues. */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* --- BODY --- */
+/* --- BODY ---
+   Arial sans-serif chosen to match the team's agreed font across
+   all pages for visual consistency throughout the website.
+   line-height: 1.7 improves readability — recommended in
+   accessibility guidelines for users with dyslexia.
+   Pure black background matches the team's agreed colour scheme. */
 body {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.7;
-  color: #222222;
-  background-color: #f9f9f9;
+  color: #ffffff;
+  background-color: #000000;
 }
 
-/* --- HEADER --- */
+/* --- HEADER ---
+   Black background continues the full-page dark theme.
+   Gold bottom border (2px solid #DAA520) creates a visual
+   separator between the header and main content — consistent
+   with the team's gold accent colour scheme. */
 header {
-  background-color: #003568;
-  padding: 0 2rem;
+  background-color: #000000;
+  border-bottom: 2px solid #DAA520;
+  padding: 0.5rem 2rem;
+  text-align: center;
 }
 
-/* --- NAVIGATION --- */
+/* --- NAVIGATION ---
+   Flexbox used to align nav links horizontally in a row.
+   justify-content: center keeps them centred on all screen sizes.
+   flex-wrap: wrap allows links to wrap to next line on small screens
+   rather than overflowing. Chosen over float/inline-block for
+   cleaner responsive behaviour.
+   Nav style matched to team's index.html — gold bordered buttons
+   on black background as agreed with the group. */
 nav ul {
   list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 0;
+  flex-wrap: wrap;
 }
 
+/* Individual nav links styled as gold-bordered buttons.
+   display: inline-block ensures the full padding area is clickable.
+   letter-spacing adds slight spacing for a premium feel.
+   transition adds smooth hover animation (0.2s ease). */
 nav ul li a {
-  display: block;
+  display: inline-block;
   color: #ffffff;
   text-decoration: none;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.2rem;
   font-size: 0.95rem;
-  letter-spacing: 0.05em;
-  transition: background-color 0.2s ease;
+  letter-spacing: 0.08em;
+  border: 1px solid #DAA520;
+  margin: 0.3rem 0.2rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* Gold fill on hover — inverts colours (gold bg, black text)
+   to give clear visual feedback to the user. */
 nav ul li a:hover {
-  background-color: #002244;
+  background-color: #DAA520;
+  color: #000000;
 }
 
-/* Active page highlight */
+/* aria-current="page" attribute targets the active page link.
+   Using an attribute selector is an accessibility best practice —
+   screen readers use aria-current to announce the current page.
+   Active page fills gold so users know which page they are on. */
 nav ul li a[aria-current="page"] {
-  background-color: #002244;
-  border-bottom: 3px solid #ffffff;
+  background-color: #DAA520;
+  color: #000000;
 }
 
-/* --- MAIN CONTENT AREA --- */
+/* --- MAIN CONTENT AREA ---
+   max-width: 1100px prevents content stretching too wide on large
+   screens, keeping text at a readable line length.
+   margin: 2rem auto centres the content block horizontally. */
 main {
   max-width: 1100px;
   margin: 2rem auto;
   padding: 0 2rem;
 }
 
+/* H1 styled in gold to establish visual hierarchy.
+   text-align: center and letter-spacing give it a
+   headline feel consistent with the team's theme. */
 main h1 {
   font-size: 2rem;
-  color: #003568;
+  color: #DAA520;
   margin-bottom: 0.5rem;
+  text-align: center;
+  letter-spacing: 0.05em;
 }
 
+/* Intro paragraph in white for consistent text colour across page. */
 main > p {
-  color: #444;
+  color: #ffffff;
   margin-bottom: 2rem;
   font-size: 1rem;
+  text-align: center;
 }
 
-/* --- JOB ARTICLES --- */
+/* --- JOB ARTICLES ---
+   Each job listing uses the article element semantically since
+   each job is self-contained content that could stand alone.
+   Decided to use article over div after reviewing semantic HTML rules.
+   Pure black background keeps cards flush with the page —
+   gold border provides the visual separation between cards. */
 .job-article {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  background-color: #000000;
+  border: 1px solid #DAA520;
+  border-radius: 4px;
   margin-bottom: 2.5rem;
   padding: 2rem;
 }
 
+/* H2 job titles in gold with a gold underline border.
+   This satisfies the two-level heading requirement (H1 page title,
+   H2 job title, H3 subsections) specified in the assignment. */
 .job-article h2 {
-  color: #1a1a2e;
-  border-bottom: 3px solid #003568;
+  color: #DAA520;
+  border-bottom: 2px solid #DAA520;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  letter-spacing: 0.03em;
 }
 
+/* H3 subsection headings in a slightly lighter gold (#e8c547)
+   to visually distinguish them from H2 job titles while
+   maintaining the gold colour palette. */
 .job-article h3 {
-  color: #333;
+  color: #e8c547;
   margin-top: 1.2rem;
   font-size: 1.05rem;
 }
 
-/* --- JOB META INFO BOX --- */
+/* --- JOB META INFO BOX ---
+   Changed job-meta from section to div after reviewing semantic
+   HTML rules — section requires a heading, div is more appropriate
+   for a styled container block.
+   Gold left border creates a clear visual callout for key job info
+   (reference number, salary, reporting line). */
 .job-meta {
-  background-color: #f4f4f4;
-  border-left: 4px solid #003568;
+  background-color: #111111;
+  border-left: 4px solid #DAA520;
   padding: 0.8rem 1rem;
   margin-bottom: 1rem;
   font-size: 0.95rem;
+  color: #ffffff;
 }
 
 .job-meta p {
   margin: 0.3rem 0;
 }
 
-/* --- LISTS --- */
+/* --- LISTS ---
+   Both ul and ol use disc bullet markers for visual consistency.
+   Bullet colour set to gold (#DAA520) via ::marker pseudo-element.
+   ol (essential requirements) uses disc instead of default numbers
+   to match the styling of ul lists throughout the page.
+   Assignment requires at least one ol and one ul — both still present. */
 ul, ol {
   padding-left: 1.5rem;
   margin-top: 0.5rem;
+  color: #ffffff;
+  list-style-type: disc;
 }
 
 ul li, ol li {
   margin-bottom: 0.4rem;
+  color: #ffffff;
 }
 
-/* --- ASIDE --- */
+/* Gold bullet marker colour */
+ul li::marker, ol li::marker {
+  color: #DAA520;
+}
+
+/* --- ASIDE ---
+   Required by Swinburne spec: floated right, width exactly 25%,
+   with margin, padding, and border all explicitly set.
+   float: right pulls the aside out of normal document flow,
+   allowing job article content to wrap around it on the left.
+   Aside positioned before job articles in HTML so float works
+   correctly — float only affects elements that follow it in
+   document flow. */
 .jobs-aside {
   float: right;
   width: 25%;
   margin: 0 0 1rem 2rem;
   padding: 1.2rem;
-  border: 2px solid #003568;
-  border-radius: 6px;
-  background-color: #eef3f9;
+  border: 2px solid #DAA520;
+  border-radius: 4px;
+  background-color: #000000;
 }
 
 .jobs-aside h3 {
   font-size: 1.05rem;
-  color: #1a1a2e;
+  color: #DAA520;
   margin-bottom: 0.8rem;
-  border-bottom: 1px solid #003568;
+  border-bottom: 1px solid #DAA520;
   padding-bottom: 0.4rem;
 }
 
 .jobs-aside ul {
   padding-left: 1.2rem;
+  color: #ffffff;
+  list-style-type: none;
 }
 
 .jobs-aside ul li {
@@ -147,44 +241,56 @@ ul li, ol li {
   font-size: 0.9rem;
 }
 
+/* Aside links in gold to match the overall accent colour.
+   Hover changes to white for clear interactive feedback. */
 .jobs-aside a {
-  color: #003568;
+  color: #DAA520;
   text-decoration: underline;
 }
 
 .jobs-aside a:hover {
-  color: #002244;
+  color: #ffffff;
 }
 
-/* Clearfix so aside doesn't overflow */
+/* Clearfix: after floating the aside, this pseudo-element forces
+   the parent .jobs-wrapper to expand and contain the floated child.
+   Without this, the wrapper collapses and the footer overlaps
+   the job content. */
 .jobs-wrapper::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* --- FOOTER --- */
+/* --- FOOTER ---
+   Footer style matched to team's shared design across all pages.
+   background-image references the team's shared footer image.
+   Jira, GitHub, and email links included as required by spec. */
 footer {
-  background-color: #003568;
-  color: #ffffff;
+  border-top: 6px double white;
+  padding: 40px 10px;
   text-align: center;
-  padding: 1.5rem 2rem;
-  margin-top: 3rem;
-  font-size: 0.9rem;
-  line-height: 1.8;
+  display: inline-block;
+  width: 99%;
+  margin-top: 50px;
+  background-image: url("images/footimg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 footer a {
-  color: #aac8e8;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #ffffff;
+  color: white;
   text-decoration: underline;
 }
 
-/* --- RESPONSIVE --- */
+/* --- RESPONSIVE DESIGN ---
+   Media query triggers at 768px (standard tablet breakpoint).
+   Tested on mobile view in browser — aside stacks full-width
+   above job listings and nav links wrap vertically as intended.
+   On smaller screens:
+   - aside floats off and stacks full-width above job listings
+   - nav links stack vertically for easier tapping on mobile
+   This satisfies the responsive layout requirement in the spec. */
 @media (max-width: 768px) {
   .jobs-aside {
     float: none;
@@ -194,11 +300,11 @@ footer a:hover {
 
   nav ul {
     flex-direction: column;
+    align-items: center;
   }
 
   nav ul li a {
-    padding: 0.8rem 1rem;
-    border-bottom: 1px solid #002244;
+    padding: 0.6rem 1rem;
   }
 
   main {
