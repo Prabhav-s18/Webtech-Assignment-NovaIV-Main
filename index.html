@@ -3,179 +3,158 @@
 <head>
     <title>NovaIV Cameras</title>
     <meta charset="UTF-8">
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> 
-    <meta name = "description" content = "NovaIV Cameras">
-    <meta name = "keywords" content = "NovaIV, Cameras, Lenses, Camera Accessories">
-    <meta name = "author" content = "NovaIV Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="NovaIV Cameras">
+    <meta name="keywords" content="NovaIV, Cameras, Lenses, Camera Accessories">
+    <meta name="author" content="NovaIV Team">
 
-
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-    </style>
-
-    <link rel="stylesheet" href="home.css" type="text/css"> 
     <link rel="stylesheet" href="global.css" type="text/css">
+    <link rel="stylesheet" href="home.css" type="text/css"> 
+
 </head>
-
-
 
 <body>
 
+<div id="container">
 
-    <div id="container">
+    <nav id="mainnav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
 
+    <header>
+        <h1>NovaIV Cameras</h1>
+        <h2 id="slogan">Capture Beyond Limits</h2>
+        <p>NovaIV Cameras is a photography-focused online retailer offering cameras, lenses, and accessories for creators of all levels.</p>
+        <p>Our mission is to make photography accessible while offering expert guidance and excellent customer service.</p>
+    </header>
 
-        <nav id = "mainnav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
+    <section id="images">
+        <img id="img1" src="images/NOVALOGO.jpg" alt="NovaIV Logo" width="300" height="300">
+        <img id="img2" src="images/imagenovaiv.JPG" alt="NovaIV Camera" width="300" height="300">
+    </section>
 
+    <!-- FIXED: Added FORM for accessibility -->
+    <section id="search">
+        <form action="#">
+            <label for="search-bar" class="visually-hidden">Search</label>
+            <input class="searchbar" type="search" id="search-bar" name="search" placeholder="Search for cameras...">
+            <button class="search-button" type="submit">Search</button>
+        </form>
+    </section>
 
+    <section id="job-info">
+        <h2 id="midhead1">We're hiring!!!</h2>
+        <p id="midhead2">
+            Join the NovaIV team and help shape the future of photography retail. 
+            We're looking for passionate, creative individuals ready to make their mark.
+        </p>
+    </section>
 
+    <section id="product-list">
 
-        <header>
-            <h1>NovaIV Cameras</h1>
-            <h3 id="slogan">Capture Beyond Limits</h3>
-            <h4>NovaIV Cameras is a photography-focused online retailer offering cameras, lenses, and accessories for creators of all levels.</h4>
-            <h4>Our mission is to make photography accessible while offering expert guidance and excellent customer service.</h4>
-        </header>
+        <h2>Products</h2>
 
+        <div class="product-cam">
+            <img class="cam" src="images/sony.jpeg" alt="Sony Camera" width="200">
+            <img class="cam" src="images/canon.jpg" alt="Canon Camera" width="200">
+            <p>From vintage digital cameras to cutting edge digital cameras we offer a huge range for all types of people.</p>
+        </div>
 
-  
-  
-    
-        <section id="images">
-	        <img id = "img1" src="images/NOVALOGO.jpg" alt="NovaIV Logo" title="Filesize 222kb" width = "300px" height="300px">
-            <img id = "img2" src="images/imagenovaiv.JPG" alt="NovaIV Camera" title="Filesize 1.5mb" width = "300px" height="300px">
-	    </section>
+        <div class="product-lens">
+            <img class="lens" src="images/canonlens.jpg" alt="Canon lens" width="200">
+            <img class="lens" src="images/sonylens.jpeg" alt="Sony lens" width="200">
+            <p>The right glass makes all the difference. Browse our wide selection of lenses.</p>
+        </div>
 
+        <div class="product-accessories">
+            <img class="accessories" src="images/sd.jpeg" alt="SD Card" width="200"> 
+            <img class="accessories" src="images/flash.jpg" alt="Flash Gun" width="200">
+            <p>Complete your setup with our range of accessories.</p>
+        </div>
 
-        <section id="search">
-            <input  class="searchbar" type="search" id="search-bar" name="search" placeholder="Search for cameras...">
-                <button class="search-button" type="submit" id="search-button">Search</button>
-        </section>
+    </section>
 
-        <section id="job-info">
-            <h2 id="midhead1">We're hiring!!!</h2>
-            <h3 id="midhead2">Join the NovaIV team and help shape the future of photography retail, we're looking for passionate, creative individuals ready to make their mark, take a look at our jobs page and take a look at what would be your future</h3>
-        </section>
-      
-        <section id="product-list">
+    <!-- FIXED: Added caption for accessibility -->
+    <section id="shipping">
+        <table>
 
+            <caption>NovaIV Shipping Details</caption>
 
-            <h2>Products</h2>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Shipping Type</th>
+                    <th>Delivery Time</th>
+                    <th>Cost</th>
+                    <th>Extra Protection</th>
+                </tr>
+            </thead>
 
-            <div class="product-cam">
-                <img id="cam" src="images/sony.jpeg" alt="Sony Camera" title="Filesize 1.2mb" width="200px">
-                <img id="cam" src="images/canon.jpg" alt="Canon Camera" title="Filesize 1.2mb" width="200px" height="200px"> 
-                <p>From vintage digital cameras to cutting edge digital cameras we offer a huge range for all types of people.</p>
-                <p>Passionate about cameras? We're always looking for knowledgeable team members to help our customers find their perfect match.</p>
-            </div>
+            <tbody>
 
-            <div class="product-lens">
-                <img id="lens" src="images/canonlens.jpg" alt="Canon lens" title="Filesize 1.2mb" width="200px">
-                <img id="lens" src="images/sonylens.jpeg" alt="Sony lens" title="Filesize 1.2mb" width="200px">
-                <p>The right glass makes all the difference. Browse our wide selection of lenses across all mounts, budgets and styles.</p>
-                <p>Or grab one of our curated bundles and save.</p>
-            </div>
+                <tr>
+                    <td rowspan="2">Domestic</td>
+                    <td>Standard</td>
+                    <td>5-7 Days</td>
+                    <td>$7.99 OR FREE if cart is $800+</td>
+                    <td rowspan="2">$15.00</td>
+                </tr>
 
-            <div class="product-accessories">
-                <img id="accessories" src="images/sd.jpeg" alt="SD Card" title="Filesize 1.2mb" width = "200px"> 
-                <img id="accessories" src="images/flash.jpg" alt="Flash Gun" title="Filesize 1.2mb" width ="200px">
-                <p>Complete your setup with our range of accessories. From SD cards and gimbals to lighting and beyond,</p>
-                <p>everything you need to shoot better, right here.</p>
-            </div>
-        </section>
+                <tr>
+                    <td>Express</td>
+                    <td>2-3 Days</td>
+                    <td>$17.99</td>
+                </tr>
 
+                <tr>
+                    <td>International</td>
+                    <td>Worldwide</td>
+                    <td>10-14 Days</td>
+                    <td>$24.99</td>
+                    <td>$15.00</td>
+                </tr>
 
+            </tbody>
 
-        <section id="shipping">
-            <table>
-          
-                <tbody>
+        </table>
+    </section>
 
-                    <tr style="color: black; background-color: goldenrod;"> 
-                        <td colspan="5"> <h2>NovaIV Shipping Details</h2></td>
-                    </tr>
+    <section id="acknowledgement">
+        <h2>Acknowledgement of Country</h2>
+        <p>
+            We acknowledge the Traditional Custodians of the lands on which we operate 
+            and pay our respects to Elders past, present and emerging.
+        </p>
+    </section>
 
-                    
-                
-                    <tr>
-                        <th>Category</th>
-                        <th>Shipping Type</th>
-                        <th>Delivery Time</th>
-                        <th>Cost</th>
-                        <th>Extra Protection</th>
-                    </tr>
+    <footer>
 
-                    <tr>
-                        <td rowspan="2">Domestic</td>
-                        <td>Standard</td>
-                        <td>5-7 Days</td>
-                        <td>$7.99 OR FREE if cart is $800+</td>
-                        <td rowspan="2">$15.00</td>
-                    </tr>
+        <p>Copyright &copy; 2026 NovaIV Cameras. All rights reserved.</p>
 
-                    <tr>
-                        <td>Express</td>
-                        <td>2-3 Days</td>
-                        <td>$17.99</td>
-                    </tr>
+        <p>
+            <a href="https://github.com/Prabhav-s18/Webtech-Assignment-NovaIV-Main.git" target="_blank">
+            Our Github Repository</a>
+        </p>
 
-                    <tr>
-                        <td>International</td>
-                        <td>Worldwide</td>
-                        <td>10-14 Days</td>
-                        <td>$24.99</td>
-                        <td>$15.00</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <p>
+            <a href="https://student-team-ltzx8xz8.atlassian.net/" target="_blank">
+            Our Jira Board</a>
+        </p>
 
-        <section id="acknowledgement">
-            <h3>Acknowledgement of Country</h3>
-                <p>We acknowledge the Traditional Custodians of the lands on which 
-                we operate and pay our respects to Elders past, present and emerging. 
-                We celebrate the diversity of Aboriginal and Torres Strait Islander 
-                peoples and their ongoing connection to land, sea and community.</p>
-        </section>
+        <p>
+            Contact us at 
+            <a href="mailto:info@novaIVcameras.com">
+            info@novaIVcameras.com</a>
+        </p>
 
+    </footer>
 
+</div>
 
-
-        <footer>
-           
-            <p id="copyright">Copyright &copy; 2026 NovaIV Cameras. All rights reserved.</p>
-
-            <p><a href="https://github.com/Prabhav-s18/Webtech-Assignment-NovaIV-Main.git" target="_blank">Our Github Repository</a></p>
-
-
-            <p> <a href="https://student-team-ltzx8xz8.atlassian.net/jira/software/projects/KAN/summary?atlOrigin=eyJpIjoiZDQ1YzExYmU2MjQwNDliMWIzNmQ5OWQ4ZWJhMzNhYmIiLCJwIjoiaiJ9" target="_blank">Our Jira Board</a></p>
-
-            <p> Contact us at <a href="mailto:info@novaIVcameras.com">info@novaIVcameras.com</a></p>
-
-
-
-
-
-        </footer>
-
-    
-
-
-
-
-    </div>  
 </body>
-
-
 </html>
