@@ -245,22 +245,7 @@ th {
    color: black;
 }
 
-footer {
-   border-top: 6px double goldenrod;
-   padding: 40px 10px;
-   text-align: center;
-   display: inline-block;
-   width: 99%;
-   margin-top: 50px;
-   background-image: url("images/footimg.jpg");
-   background-size: cover;
-   background-position: center;
-}
 
-footer a {
-   color: white;
-   text-decoration: underline;
-}
 
 
 #acknowledgement {
