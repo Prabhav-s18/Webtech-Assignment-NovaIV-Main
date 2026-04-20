@@ -17,6 +17,20 @@
    Removes default browser margin and padding from all elements.
    box-sizing: border-box makes padding and border included in width
    calculations, preventing layout overflow issues. */
+
+   /*
+
+filename: jobs.css
+
+author: Saifur Rahman 
+
+created: 09/04/2026
+
+last modified: 20/04/2026
+
+description: jobs.html
+
+*/
 * {
   margin: 0;
   padding: 0;

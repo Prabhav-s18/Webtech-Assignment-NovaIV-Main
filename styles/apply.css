@@ -1,5 +1,19 @@
 /* Apply page external stylesheet */
 
+/*
+
+filename: apply.css
+
+author: Prince Nakrani
+
+created: 09/04/2026
+
+last modified: 20/04/2026
+
+description: apply.html
+
+*/
+
 * {
   box-sizing: border-box;
 }
