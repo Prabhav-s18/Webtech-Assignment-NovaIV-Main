@@ -277,3 +277,81 @@ footer a {
 .hidden{
    display: none;
 }
+
+
+/* Responsive layout - styles.css requirement */
+
+/* Tablet - 768px and below */
+@media (max-width: 768px) {
+
+    /* Product boxes stack on top of each other instead of floating side by side */
+    .product-cam, .product-lens, .product-accessories {
+        float: none;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    /* Header images hidden on tablet since they take up too much space */
+    #img1, #img2 {
+        display: none;
+    }
+
+    /* Table scrolls horizontally instead of getting squished */
+    #shipping {
+        overflow-x: auto;
+    }
+
+    /* Search bar goes full width */
+    .searchbar {
+        width: 90%;
+    }
+
+    /* Nav links wrap nicely */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Job info and acknowledgement sections go full width */
+    #job-info, #acknowledgement {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    /* Header text shrinks slightly */
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile - 480px and below */
+@media (max-width: 480px) {
+
+    /* Container gets some padding so content doesnt touch screen edges */
+    #container {
+        padding: 10px;
+    }
+
+    /* Product boxes go fully full width on mobile */
+    .product-cam, .product-lens, .product-accessories {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    /* Images inside product boxes shrink to fit */
+    #cam, #lens, #accessories {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Footer padding reduced on mobile */
+    footer {
+        padding: 20px 10px;
+    }
+
+    /* Table font size shrinks on mobile */
+    table, th, td {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
